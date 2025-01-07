@@ -11,40 +11,87 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
   <style>
-   body {
+body {
     background-color: rgb(244, 215, 219);
     margin: 0;
     padding: 0;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
+.container {
+    display: flex; 
+    gap: 40px; 
+    margin: 0 40px; 
+}
 .menu {
+    flex: 50%;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
     margin: 20px;
     padding: 20px;
 }
-.dessertpic {
+.card{
+    flex: 50%;
+    background-color: #f7deec;
+    padding: 20px;
     border: 1px solid #761f1f;
     border-radius: 10px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.4);
-    padding: 10px;
+}
+.dessertpic {
+    border-radius: 12px;
+    transition: box-shadow 0.3s ease;
+    position: relative; 
+    display: inline-block;
     text-align: center;
-    background-color: #f7deec;
-
+    
 }
 .dessertpic img {
     max-width: 100%;
-    border-radius: 6px;
+    border-radius: 8px;
+    width: 250px;
 }
 .dessertpic:hover {
    
-    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
 }
 .dessertpic:hover button {
   transform: scale(1.02);
   box-shadow: 0px 6px 10px rgba(0,0, 0, 0.5);
 }
+
+.dessertpic h3 {
+  margin: 0px 0;
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+
+.dessertpic p {
+  font-size: 14px;
+  color: #666;
+  margin: 5px 0 10px;
+}
+
+button {
+  position: relative;
+  top: -20px;
+  background-color: #ffffff;
+  border: 1px solid #D3D3D3;
+  color: #333;
+  border-radius: 25px; 
+  padding: 10px 20px;
+  font-size: 14px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #F6ECEB; 
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2);
+}
+
 h1, h2 {
     font-family: 'Arial', sans-serif;
     color: #761f1f;
@@ -59,52 +106,84 @@ p {
     text-align: center;
     padding: 0 10px;
 }
+
+/* Tevfik Kaan Filiz was here :)) */
+
   </style>
 </head>
 <body>
   <header>
         <h1>Meryoş'un Tatlı Dünyası</h1>
     </header>
-    <div class="menu">
-        <div class="dessertpic">
-            <img src="foto1.jpg">
-            <h3>Baklava</h3>
-            <p>$6.00</p>
-            <button>Add to cart <i class="fa-solid fa-cart-plus"></i></button>
+    <div class="container">
+        <div class="menu">
+            <div class="dessertpic">
+                <img src="assets/images/image-baklava-desktop.jpg">
+                <button>Add to cart <i class="fa-solid fa-cart-plus"></i></button>
+                <h3>Baklava</h3>
+                <p>$6.00</p>
+                
+            </div>
+            <div class="dessertpic">
+                <img src="assets/images/image-brownie-desktop.jpg">
+                <button>Add to cart <i class="fa-solid fa-cart-plus"></i></button>
+                <h3>Brownie</h3>
+                <p>$3.00</p>
+                
+            </div>
+            <div class="dessertpic">
+                <img src="assets/images/image-cake-desktop.jpg">
+                <button>Add to cart <i class="fa-solid fa-cart-plus"></i></button>
+                <h3>Red Velvet Cake</h3>
+                <p>$4.50</p>
+                
+            </div>
+            <div class="dessertpic">
+                <img src="assets/images/image-creme-brulee-desktop.jpg">
+                <button>Add to cart <i class="fa-solid fa-cart-plus"></i></button>
+                <h3>Creme Brule</h3>
+                <p>$6.00</p>
+                
+            </div>
+            <div class="dessertpic">
+                <img src="assets/images/image-macaron-desktop.jpg">
+                <button>Add to cart <i class="fa-solid fa-cart-plus"></i></button>
+                <h3>Macaron Mix Of Five</h3>
+                <p>$7.00</p>
+                
+            </div>
+            <div class="dessertpic">
+                <img src="assets/images/image-meringue-desktop.jpg">
+                <button>Add to cart <i class="fa-solid fa-cart-plus"></i></button>
+                <h3>Lemon Pie</h3>
+                <p>$5.75</p>
+                
+            </div>
+            <div class="dessertpic">
+                <img src="assets/images/image-panna-cotta-desktop.jpg">
+                <button>Add to cart <i class="fa-solid fa-cart-plus"></i></button>
+                <h3>Lemon Pie</h3>
+                <p>$5.75</p>
+                
+            </div>
+            <div class="dessertpic">
+                <img src="assets/images/image-tiramisu-desktop.jpg">
+                <button>Add to cart <i class="fa-solid fa-cart-plus"></i></button>
+                <h3>Lemon Pie</h3>
+                <p>$5.75</p>
+                
+            </div>
+            <div class="dessertpic">
+                <img src="assets/images/image-waffle-desktop.jpg">
+                <button>Add to cart <i class="fa-solid fa-cart-plus"></i></button>
+                <h3>Lemon Pie</h3>
+                <p>$5.75</p>
+                
+            </div>
         </div>
-        <div class="dessertpic">
-            <img src="foto2.jpg">
-            <h3>Brownie</h3>
-            <p>$3.00</p>
-            <button>Add to cart <i class="fa-solid fa-cart-plus"></i></button>
+        <div class="cart">
+            Your Cart (0)
         </div>
-        <div class="dessertpic">
-            <img src="foto3.jpg">
-            <h3>Red Velvet Cake</h3>
-            <p>$4.50</p>
-            <button>Add to cart <i class="fa-solid fa-cart-plus"></i></button>
-        </div>
-        <div class="dessertpic">
-            <img src="foto4.jpg">
-            <h3>Creme Brule</h3>
-            <p>$6.00</p>
-            <button>Add to cart <i class="fa-solid fa-cart-plus"></i></button>
-        </div>
-        <div class="dessertpic">
-            <img src="foto5.jpg">
-            <h3>Macaron Mix Of Five</h3>
-            <p>$7.00</p>
-            <button>Add to cart <i class="fa-solid fa-cart-plus"></i></button>
-        </div>
-        <div class="dessertpic">
-            <img src="foto6.jpg">
-            <h3>Lemon Pie</h3>
-            <p>$5.75</p>
-            <button>Add to cart <i class="fa-solid fa-cart-plus"></i></button>
-        </div>
-    </div>
-    <div class="cart">
-        Your Cart (0)
     </div>
 </body>
 </html>
